@@ -1,0 +1,34 @@
+html, body {
+    height: 100%;
+}
+div.imagenCabecera {
+    display: inline-flex;
+    justify-content: center;
+}
+div.imagenCabecera > img{
+    width: 90%;
+    border-radius: 10px;
+}
+main {
+    margin: 5%;
+    width: 90%;
+}
+table {
+    width: 90%;
+    margin: 10px;
+}
+td {
+    border: 1px solid black;
+    padding: 20px;
+}
+div.low {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+div.low > div {
+    padding: 10px;
+    margin: 10px;
+}
+h3 {
+    color: deepskyblue;
+}
