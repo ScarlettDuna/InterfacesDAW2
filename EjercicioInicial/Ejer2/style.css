@@ -1,0 +1,71 @@
+body {
+    font-family: "Roboto", "Inter", "Sans Serif";
+    display: flex;
+    justify-content: center;
+}
+
+#brain, #catalogo {
+    background-color: ghostwhite;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border-color: gray;
+}
+nav {
+    margin-bottom: 15px;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+.cuerpo {
+    border-radius: 10px;
+    background-color: lightgrey;
+    width: 85%;
+    padding: 25px;
+    justify-content: center;
+}
+
+form > button {
+    background-color: ghostwhite;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+.activo {
+    box-shadow: 5px 5px lightgrey;
+    background-color: lightgrey;
+}
+select, input {
+    padding: 5px 5px;
+    border-radius: 5px;
+    border-color: gray;
+}
+input {
+    background-color: lightgrey;
+}
+input:hover, select:hover {
+    border: 2px solid dodgerblue;
+}
+.barriga {
+    background-color: floralwhite;
+    padding: 15px;
+    border-radius: 10px;
+}
+h4 {
+    color: darkred;
+}
+.resultado {
+    width: 85%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 5px darkgray;
+    padding: 15px ;
+    justify-items: center;
+    margin-top: 25px;
+}
+.resultado > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
