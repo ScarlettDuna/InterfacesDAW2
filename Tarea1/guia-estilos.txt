@@ -1,0 +1,49 @@
+Paleta “Nike Run” (limpia + moderna)
+
+Apta para un buscador minimalista, profesional y con enfoque en datos.
+
+Verde eléctrico (accent): #32E875
+
+Negro carbón: #111111
+
+Gris medio: #6B6B6B
+
+Gris claro: #E5E5E5
+
+Blanco: #FFFFFF
+
+👉 Estética seria pero deportiva.
+
+Una paleta recomendada y equilibrada (lista para usar)
+
+Si no quieres complicarte y buscas algo profesional + deportivo:
+
+Colores base:
+
+Fondo: #F7F9FB
+
+Texto principal: #222222
+
+Texto secundario: #555555
+
+Colores deportivos:
+
+Primario (acciones): #FF5722
+
+Secundario (detalles): #2979FF
+
+Acento (categorías, tics, tags): #4CAF50
+
+Estética moderna garantizada.
+
+🧠 Bonus: reglas rápidas de diseño para running
+
+Botón principal → colores intensos (naranja, azul o verde).
+
+Filtros y tarjetas → gris claro o blanco, bordes redondeados, sombra suave.
+
+Mapas, rutas y resultados → usar colores neutros para que resalten los marcadores.
+
+Eventos llenos, cancelados → destacados con rojo suave #E53935.
+
+“Plazas disponibles” → verde #43A047.
