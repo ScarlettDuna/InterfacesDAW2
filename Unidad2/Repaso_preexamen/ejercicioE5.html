@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel CSS</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            height: 100px;
+            background-color: bisque;
+            width: 100%;
+            text-align: center;
+        }
+        main {
+            margin-top: 100px;
+        }
+        caption {
+            visibility: hidden;
+        }
+        table {
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        tr, td, th {
+            border: 2px solid #333;
+            padding: 5px 10px;
+            vertical-align: bottom;
+        }
+        td:last-child {
+            text-align: right;
+        }
+        .icon {
+            background-image: url(#);
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #FFFFCC;
+        }
+        tbody tr:hover {
+            background-color: #FFFF66;
+        }
+        footer {
+            bottom: 0;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            background-color: #FFFFCC;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="cabecera">
+        <h1>Panel de divisas</h1>
+    </header>
+
+    <main class="contenido">
+
+        <table class="divisas">
+            <caption>Valores actuales</caption>
+
+            <thead>
+                <tr>
+                    <th>Moneda</th>
+                    <th>País</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>Euro</th>
+                    <td class="icon euro">Unión Europea</td>
+                    <td>1.00</td>
+                </tr>
+                <tr>
+                    <th>Dólar</th>
+                    <td class="icon dolar">Estados Unidos</td>
+                    <td>1.08</td>
+                </tr>
+                <tr>
+                    <th>Yen</th>
+                    <td class="icon yen">Japón</td>
+                    <td>158.20</td>
+                </tr>
+                <tr>
+                    <th>Libra</th>
+                    <td class="icon libra">Reino Unido</td>
+                    <td>0.86</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <footer class="pie">
+        <p>Datos orientativos</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio CSS</title>
+    <style>
+        * {
+            outline: 1px solid red;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        header {
+            position: fixed;
+            height: 100px;
+            width: 100%;
+            background-color: aquamarine;
+            top: 0;
+        }
+
+        main {
+            margin-top: 100px;
+        }
+
+        table {
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table,
+        td,
+        th {
+            border: 2px solid #333;
+        }
+
+        th {
+            text-align: center;
+            padding: 5px 10px;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: lightpink;
+        }
+
+        tr:hover {
+            background-color: #FFFF66;
+        }
+
+        td.euro {
+            background-image: url("euro.png");
+        }
+
+        td.dolar {
+            background-image: url("dolar.png");
+        }
+
+        td.yen {
+            background-image: url("yen.png");
+        }
+
+        td.libra {
+            background-image: url("libra.png");
+        }
+        td.euro,
+        td.dolar,
+        td.yen,
+        td.libra {
+            background-repeat: no-repeat;
+            background-position: top left;
+            padding-left: 25px; /* para que el texto no se monte encima */
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            width: 100%;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <h1>Facturación</h1>
+    </header>
+
+    <main class="contenido">
+
+        <table class="facturas">
+            <caption>Resumen mensual</caption>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Moneda</th>
+                    <th>Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Empresa A</th>
+                    <td class="euro">€</td>
+                    <td>1.200</td>
+                </tr>
+                <tr>
+                    <th>Empresa B</th>
+                    <td class="dolar">$</td>
+                    <td>980</td>
+                </tr>
+                <tr>
+                    <th>Empresa C</th>
+                    <td class="yen">¥</td>
+                    <td>130.000</td>
+                </tr>
+                <tr>
+                    <th>Empresa D</th>
+                    <td class="libra">£</td>
+                    <td>760</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <footer class="pie">
+        <p>Total anual estimado</p>
+    </footer>
+
+</body>
+
+</html>

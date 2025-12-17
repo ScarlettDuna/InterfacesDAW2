@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio CSS</title>
+    <style>
+        * { outline: 1px solid red; }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        header {
+            position: fixed;
+            background-color: aquamarine;
+            width: 100%;
+            height: 80px;
+            top: 0
+        }
+        .badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        nav {
+            margin-top: 80px;
+            width: 100%;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: auto 10px;
+            display: inline-block;
+        }
+        main {
+            margin-bottom: 60px; /* se reserva al altura del footer para que no tape el main */
+        }
+        footer {
+            height: 60px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- header fijo, siempre arriba, ocupa todo el ancho-->
+    <header class="header">
+        <h1>Diseño de Interfaces</h1>
+        <!-- Badge en la esquina superior derecha del header-->
+        <span class="badge">EXAMEN</span>
+    </header>
+
+    <nav class="menu">
+        <!--Menú horizontal-->
+        <ul>
+            <li>Inicio</li>
+            <li>Temario</li>
+            <li>Ejercicios</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+
+    <main class="contenido">
+        <section class="bloque">
+            <h2>Bloque 1</h2>
+            <p>Texto del primer bloque.</p>
+        </section>
+
+        <section class="bloque">
+            <h2>Bloque 2</h2>
+            <p>Texto del segundo bloque.</p>
+        </section>
+
+        <section class="bloque">
+            <h2>Bloque 3</h2>
+            <p>Texto del tercer bloque.</p>
+        </section>
+    </main>
+    <!--Footer fijo abajo, pegado abajo a la ventana, visible aunque hagas scroll-->
+    <footer class="footer">
+        <p>Footer fijo</p>
+    </footer>
+
+</body>
+
+</html>
