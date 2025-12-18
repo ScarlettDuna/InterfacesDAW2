@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Horario CSS</title>
+    <style>
+        body {
+            padding-top: 50px;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        header {
+            position:fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            background-color: lightblue;
+            height: 50px;
+        }
+        .turno {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        li:hover {
+            background-color: lightgoldenrodyellow;
+        }
+        table {
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        td, th {
+            border: 1px solid #333;
+            vertical-align: bottom;
+        }
+        th {
+            text-align: center;
+        }
+        .prog {
+            background-color: lightblue;
+        }
+        .bd {
+            background-color: lightgreen;
+        }
+        .lm {
+            background-color: lightgoldenrodyellow;
+        }
+        .si {
+            background-color: lightgrey;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: lightsalmon;
+        }
+        tbody tr:hover {
+            background-color: lightyellow;
+        }
+        td:last-child, th:last-child {
+            visibility: hidden;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<header class="cabecera">
+    <h1>Horario semanal</h1>
+    <span class="turno">MAÑANA</span>
+</header>
+
+<nav class="menu">
+    <ul>
+        <li>Lunes</li>
+        <li>Martes</li>
+        <li>Miércoles</li>
+        <li>Jueves</li>
+        <li>Viernes</li>
+    </ul>
+</nav>
+
+<main class="contenido">
+
+    <table class="horario">
+        <caption>2º DAW</caption>
+
+        <thead>
+        <tr>
+            <th>Hora</th>
+            <th>Aula</th>
+            <th>Asignatura</th>
+            <th>Profesor</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <th>8:00</th>
+            <td>A101</td>
+            <td class="prog">Programación</td>
+            <td>Laura</td>
+        </tr>
+        <tr>
+            <th>9:00</th>
+            <td>A101</td>
+            <td class="bd">Bases de datos</td>
+            <td>Juan</td>
+        </tr>
+        <tr>
+            <th>10:00</th>
+            <td>B203</td>
+            <td class="lm">Lenguajes</td>
+            <td>Ana</td>
+        </tr>
+        <tr>
+            <th>11:00</th>
+            <td>B203</td>
+            <td class="si">Sistemas</td>
+            <td>Carlos</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</main>
+
+<footer class="pie">
+    <p>Centro de Formación Profesional</p>
+</footer>
+
+</body>
+</html>

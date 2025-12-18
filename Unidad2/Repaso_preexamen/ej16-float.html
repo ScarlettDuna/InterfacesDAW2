@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Float medio</title>
+    <style>
+        body {
+            padding: 45px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            text-align: center;
+        }
+        aside {
+            float: left;
+            width: 150px;
+        }
+        main {
+            float: right;
+            padding: 20px;
+        }
+        footer {
+            clear: both;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+
+    <header class="header">
+        <h1>Noticias</h1>
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li>Portada</li>
+            <li>Política</li>
+            <li>Economía</li>
+            <li>Deportes</li>
+        </ul>
+    </aside>
+
+    <main class="contenido">
+        <h2>Titular principal</h2>
+        <p>
+            Este texto debe ocupar el espacio restante a la derecha del menú lateral.
+            Debe colocarse correctamente sin solaparse ni bajar debajo del sidebar
+            mientras haya espacio horizontal.
+        </p>
+    </main>
+
+    <footer class="footer">
+        <p>Footer</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
