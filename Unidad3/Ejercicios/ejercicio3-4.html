@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con1, .con2 {
+            background-color: blue;
+            display: flex;
+            flex-flow: wrap-reverse;
+            height: 400px;
+            margin: 5px;
+        }
+        .con1 > div, .con2 > div {
+            background-color: lightskyblue;
+            border: 1px solid white;
+            height: 23%;
+            width: 23%;
+            text-align: center;
+            align-content: center;
+            color: white;
+        }
+        .con1 {
+            justify-content: space-around;
+            align-content: center;
+        }
+        .con2 {
+            justify-content: space-between;
+            align-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+    <div class="con1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="con2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

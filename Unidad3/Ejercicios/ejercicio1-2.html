@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .con1, .con2, .con3 {
+            background-color: aquamarine;
+            margin: 10px;
+            height: 100px;
+            align-items: end;
+        }
+        .con1 > div, .con2 > div {
+            background-color: orangered;
+            height: 33%;
+            width: 17%;
+            text-align: center;
+            align-content: center;
+            color: white;
+        }
+        .con1 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .con2 {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+        }
+        .con3 {
+            height: 400px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .con3 > div {
+            background-color: orangered;
+            height: 17%;
+            width: 17%;
+            text-align: center;
+            align-content: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <div class="con1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="con2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <h1>Ejercicio 2</h1>
+    <div class="con3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>
