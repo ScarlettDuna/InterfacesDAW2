@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <style>
+        .contenedor {
+            width: 80%;
+            display: grid;
+            gap: 5px;
+            grid-template-columns: repeat(auto-fill, minmax(18rem, max-content) minmax(9rem, max-content));
+            grid-template-rows: repeat(auto-fill, minmax(6rem, max-content));
+        }
+        div > div {
+            border: 1px solid black;
+            background-color: darkslategray;
+            color: white;
+            border-radius: 5px;
+            padding: 12px;
+        }
+        img {
+            justify-self: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 2</h1>
+    <div class="contenedor">
+        <div>
+            <img src="./MaterialEjerciciosGrid/landscape.png" alt="" width="250px">
+        </div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+        <div>G</div>
+        <div>H</div>
+        <div>I</div>
+    </div>
+</body>
+</html>

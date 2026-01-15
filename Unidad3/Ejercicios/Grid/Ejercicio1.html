@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .contenedor {
+            height: 25rem;
+            display: grid;
+            grid-template: repeat(3, 1fr) / 1fr 2fr 1fr 2fr;
+            grid-auto-rows: 2fr;
+            gap: 5px;
+        }
+        div > div {
+            border: 1px solid black;
+            
+        }
+        div > div:nth-child(odd) {
+            background-color: gray;
+        }
+        div > div:nth-child(even) {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dioses Primigenios</h1>
+    <div class="contenedor">
+        <div>1</div>
+        <div>Cthulhu</div>
+        <div>2</div>
+        <div>Yog-Sothoth</div>
+        <div>3</div>
+        <div>Azathoth</div>
+        <div>4</div>
+        <div>Shub-Niggurath</div>
+        <div>5</div>
+        <div>Nyarlathotep</div>
+        <div>6</div>
+        <div>Ghroth</div>
+        <div>7</div>
+        <div>Tulzscha</div>
+        <div>8</div>
+        <div>Tru'nembra</div>
+        <div>9</div>
+        <div>Ubbu-Sathla</div>
+        <div>10</div>
+        <div>Abhoth</div>
+    </div>
+</body>
+</html>

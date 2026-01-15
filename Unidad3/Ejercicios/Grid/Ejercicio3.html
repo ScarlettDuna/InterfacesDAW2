@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <style>
+        .con1{
+            display: grid;
+            grid-template-columns: repeat(7, minmax(6rem, 12%));
+        }
+        .con2{
+            display: grid;
+            grid-template-columns: repeat(7, minmax(6rem,1fr));
+        }
+        div > div {
+            border: 1px solid white;
+            background-color: orange;
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+    <h3>Opcion 1</h3>
+    <div class="con1">
+        
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </div>
+    <h3>Opcion 2</h3>
+    <div class="con2">
+        
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </div>
+</body>
+</html>

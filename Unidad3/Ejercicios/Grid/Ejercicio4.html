@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        body {
+            display: grid;
+            height: 100vh;
+            gap: 10px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas: 
+                ".      .      header  header  header  .     "
+                "aside  aside  .       main    main    main  "
+                "aside  aside  .       main    main    main  "
+                "aside  aside  .       main    main    main  "
+                ".      .      footer  footer  .       .    ";
+        }
+
+        header { 
+            grid-area: header; 
+        }
+        aside  { grid-area: aside; }
+        main   { grid-area: main; }
+        footer { grid-area: footer; }
+        header, aside, main, footer {
+            border: 1px solid black;
+            background-color: aquamarine;
+            text-align: center;
+            align-content: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <aside>Aside</aside>
+    <main>Main</main>
+    <footer>Footer</footer>
+</body>
+</html>
