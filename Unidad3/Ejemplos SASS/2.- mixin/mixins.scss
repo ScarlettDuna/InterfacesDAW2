@@ -1,0 +1,81 @@
+/*
+    Mixin sin Argumentos. Recuerda:
+        - Creamos con @mixin
+        - Usamos con @include
+        - Si no hay argumentos podemos no poner los "()"
+*/
+
+// Creamos el mixin con "()"
+@mixin nombreMixin(){
+    background: red;
+}
+header{
+    @include nombreMixin(); // Usamos el mixin con ()
+}
+
+
+// Creamos el mixin sin "()"
+@mixin otroMixin{
+    background: red;
+}
+header{
+    @include otroMixin; // Usamos el mixin sin ()
+}
+
+/*
+    Mixin con Argumentos.
+        Siempre con los "()"
+        Recuerda que los argumentos son como las "variables"
+*/
+
+/* Mixin con Sólo 1 argumento */
+@mixin nombre( $argumento1 ){
+    color: $argumento1;
+}
+
+p{
+    @include nombre( black );
+}
+
+/* Mixin con Más de 1 argumento */
+@mixin nombre( $argumento1 , $argumento2 , $argumento3 ){
+    color       : $argumento1;
+    font-weight : $argumento2;
+    font-size   : $argumento3;
+}
+
+p{
+    @include nombre( red , bold , 2em );
+}
+
+/* Mixin con Sólo 1 argumento */
+@mixin nombre( $argumento1 : black ){
+    color: $argumento1;
+}
+
+p{
+    @include nombre(); // Si no pones nada cogería el rojo
+   @include nombre( red ); // Negro si le asignas valor
+}
+
+/* 
+    Mixin con la Regla @content
+        Nos permite introducir múltiples propiedades CSS dentro de un mixin
+        Muy usado para Responsive Design
+*/
+@mixin movil(){
+    @media screen and (max-width: 480px) {
+        @content;    
+    }
+}
+
+p{
+    font-size: 4em;
+
+    @include movil(){
+        font-size: 2em;
+    }
+}
+
+
+

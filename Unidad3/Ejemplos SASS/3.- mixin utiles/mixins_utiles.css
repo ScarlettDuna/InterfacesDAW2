@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* 1.- Mixin para Flex */
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Si usamos un mixin */
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* 2.- Mixin para Grid */
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+/* creamos Mixin */
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+@media screen and (max-width: 480px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 0em;
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+@media screen and (max-width: 480px) {
+  section {
+    grid-template-columns: 1fr;
+    gap: 0em;
+  }
+}
+
+/* 3.- Mixin para Responsive Design */
+article {
+  width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  article {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  article {
+    width: 100%;
+  }
+}
+/* Así se hace con Mixins */
+article {
+  width: 25%;
+}
+@media screen and (max-width: 768px) {
+  article {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  article {
+    width: 100%;
+  }
+}/*# sourceMappingURL=mixins_utiles.css.map */

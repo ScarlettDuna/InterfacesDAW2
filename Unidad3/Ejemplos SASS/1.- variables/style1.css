@@ -1,0 +1,35 @@
+@charset "UTF-8";
+a {
+  color: red;
+}
+
+p {
+  background-color: red;
+}
+
+/* ¿Qué pasa si tengo muchas variables? */
+/* Aquí tenemos muchas variables y tenemos que repetir "color-", "fuente-" */
+header {
+  color: black;
+  font-family: Verdana;
+}
+
+h1 {
+  background: white;
+  font-family: Helvetica;
+}
+
+/* 
+    Vamos a ser organizados y guardar todas las variables en una lista de variables.
+        Una lista de variables es un Array.
+        Usaremos map-get() para usar las variables 
+*/
+header {
+  color: white;
+  font-family: Verdana;
+}
+
+h1 {
+  background: white;
+  font-family: Helvetica;
+}/*# sourceMappingURL=style1.css.map */

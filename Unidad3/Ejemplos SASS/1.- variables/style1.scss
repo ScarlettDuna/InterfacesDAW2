@@ -1,0 +1,54 @@
+$color : red; // Declaramos la variable
+
+a{
+    color: $color; // Usamos la variable en una propiedad
+}
+
+p{  
+    background-color: $color; // Usamos la variable en una propiedad
+}
+
+/* ¿Qué pasa si tengo muchas variables? */
+
+$color-negro    : black;
+$color-blanco   : white;
+$fuente-normal  : Verdana;
+$fuente-titulo  : Helvetica;
+
+/* Aquí tenemos muchas variables y tenemos que repetir "color-", "fuente-" */
+
+header{
+    color       : $color-negro ;
+    font-family   : $fuente-normal;
+}
+
+h1{
+    background  : $color-blanco;
+    font-family   : $fuente-titulo;
+}
+    
+
+/* 
+    Vamos a ser organizados y guardar todas las variables en una lista de variables.
+        Una lista de variables es un Array.
+        Usaremos map-get() para usar las variables 
+*/
+
+$colores: ( 
+    "color1"  : red,
+    "blanco" : white,
+);
+$fuentes : (
+    "normal"  : Verdana,
+    "titulo" : Helvetica
+);
+
+header{
+    color         : map-get( $colores , "blanco"  ) ;
+    font-family   : map-get( $fuentes , "normal" ) ;
+}
+    
+h1{
+    background    : map-get( $colores , "blanco" ) ;
+    font-family   : map-get( $fuentes , "titulo" ) ;
+}

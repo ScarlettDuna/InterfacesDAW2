@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* 
+    Cómo crear tu propio Mixin: Ejemplo con Neomorfismo (https://neumorphism.io/)
+        Detecta cuando siempre usas las mismas propiedades
+        Adapta tu mixin a tu forma de maquetar
+*/
+/* Neomorfismo sin mixins */
+article {
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 21px 21px 42px #bebebe, -21px -21px 42px #ffffff;
+}
+
+section {
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+}
+
+/* Así quedaría con Mixins */
+article {
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 21px 21px 42px #bebebe, -21px -21px 42px #ffffff;
+}
+
+section {
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+}/*# sourceMappingURL=crear tu propio Mixin.css.map */

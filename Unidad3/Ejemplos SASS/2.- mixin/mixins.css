@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*
+    Mixin sin Argumentos. Recuerda:
+        - Creamos con @mixin
+        - Usamos con @include
+        - Si no hay argumentos podemos no poner los "()"
+*/
+header {
+  background: red;
+}
+
+header {
+  background: red;
+}
+
+/*
+    Mixin con Argumentos.
+        Siempre con los "()"
+        Recuerda que los argumentos son como las "variables"
+*/
+/* Mixin con Sólo 1 argumento */
+p {
+  color: black;
+}
+
+/* Mixin con Más de 1 argumento */
+p {
+  color: red;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+/* Mixin con Sólo 1 argumento */
+p {
+  color: black;
+  color: red;
+}
+
+/* 
+    Mixin con la Regla @content
+        Nos permite introducir múltiples propiedades CSS dentro de un mixin
+        Muy usado para Responsive Design
+*/
+p {
+  font-size: 4em;
+}
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 2em;
+  }
+}/*# sourceMappingURL=mixins.css.map */
