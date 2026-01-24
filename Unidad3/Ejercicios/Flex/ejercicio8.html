@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <style>
+        * {
+            border: 1px solid black;
+            margin: 5px;
+        }
+        header {
+            display: block;
+            width: 95%;
+            padding: 10px;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 360px;
+
+        }
+        .izq-arr {
+            height: 55px;
+            width: 20%;
+        }
+        .izq-abj {
+            height: 105px;
+            width: 20%;
+        }
+        .bigcont {
+            display: flex;
+            height: 90%;
+            flex-wrap: wrap;
+            width: 80%;
+        }
+        .bigcont > div {
+            width: 20%;
+            height: 55px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Contenido de la cabecera
+    </header>
+    <main>
+        <div class="izq-arr">Contenido arriba</div>
+        <div class="izq-abj">Contenido debajo</div>
+        <div class="bigcont">
+            <div>Caja Flex</div>
+            <div>Caja Flex</div>
+            <div>Caja Flex</div>
+            <div>Caja Flex</div>
+            <div>Caja Flex</div>
+            <div>Caja Flex</div>
+            <div>Caja Flex</div>
+            <div>Caja Flex</div>
+            <div>Caja Flex</div>
+        </div>
+    </main>
+    <footer>Contenido del pie</footer>
+</body>
+</html>

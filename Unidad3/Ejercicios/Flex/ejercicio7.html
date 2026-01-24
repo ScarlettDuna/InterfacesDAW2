@@ -3,6 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio 7</title>
+    <style>
+        header {
+            background-color: darkblue;
+            color: antiquewhite;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        header h1 {
+            margin: 20px 10px;
+        }
+        nav {
+            margin: 20px 10px;
+            background-color: brown;
+            display: flex;
+        }
+        nav div {
+            padding: 12px;
+        }
+        main {
+            display: flex;
+        }
+        .texto1 {
+            flex-basis: 35%;
+            padding: 5%;
+        }
+        .texto2 {
+            flex-basis: 35%;
+            padding: 5%;
+        }
+        .images {
+            flex-basis: 30%;
+            background-color: lightsalmon;
+            display: flex;
+            flex-direction: column;
+        }
+        .uno, .dos {
+            margin: 5px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .uno > div, .dos > div {
+            height: 100px;
+            border: 1px solid red;
+            color: antiquewhite;
+            box-sizing: border-box;
+            flex-basis: 50%;
+        }
+        .uno > div:nth-child(1), .dos > div:nth-child(1),
+        .uno > div:nth-child(4), .dos > div:nth-child(4) {
+            background-color: brown;
+        }
+        .uno > div:nth-child(2), .dos > div:nth-child(2),
+        .uno > div:nth-child(3), .dos > div:nth-child(3) {
+            background-color: orange;
+        }
+        
+        
+        
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            background-color: darkblue;
+            color: antiquewhite;
+        }
+        .nav-bottom {
+            display: flex;
+            background-color: brown;
+            margin: 20px 10px;
+            
+        }
+        .nav-bottom > div {
+            padding: 10px;
+        }
+        .social {
+            display: flex;
+            margin: 20px 10px;
+            background-color: darkgoldenrod;
+        }
+        .social > div {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -17,35 +101,39 @@
 <main>
     <div class="texto1">
         <h2>Lorem ipsum dolor sit amet.</h2>
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam dolorum in libero quidem sapiente sint sunt, totam. Alias architecto culpa doloribus dolorum est omnis placeat quam quasi repellendus voluptates.</span><span>Ducimus eum nulla perferendis velit veritatis. Ab aut dolores facilis laudantium mollitia, nulla odio quae rerum! Amet consectetur corporis dicta ea fugit iste laboriosam numquam, odit quasi quos repellendus voluptas.</span><span>Architecto cumque dicta error et fuga id ipsa labore, magni nam nisi odio quos saepe, veniam? Beatae cupiditate dolores eaque incidunt, ipsa labore magnam maxime perferendis placeat repellendus repudiandae veritatis.</span></p>
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto culpa doloribus dolorum est omnis placeat quam quasi repellendus voluptates.</span><span>Ducimus eum nulla perferendis velit veritatis.</span><span>Architecto cumque dicta error et fuga id ipsa labore, magni nam nisi odio quos saepe, veniam? Beatae cupiditate dolores eaque incidunt, ipsa labore magnam maxime perferendis placeat repellendus repudiandae veritatis.</span></p>
+        <hr>
     </div>
     <div class="texto2">
         <h2>Lorem ipsum dolor sit amet.</h2>
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias asperiores commodi deleniti dolorum excepturi odit praesentium tempore! Aperiam debitis fugit, id magnam molestias perferendis provident quisquam recusandae repellendus sed.</span><span>Asperiores eius illum iste nobis perspiciatis quae quod veniam voluptas. Debitis iste placeat possimus? Adipisci architecto cum facilis impedit magnam nemo qui reiciendis voluptate voluptatibus! Aut culpa fugit officiis quo?</span><span>Aliquam animi architecto beatae illo illum iure minima nostrum quam. A ad amet consectetur earum eius maiores modi, nisi praesentium, qui quisquam, quo rem saepe voluptatum. Illum nesciunt porro voluptatibus?</span></p>
+        <p><span>Ad alias asperiores commodi deleniti dolorum excepturi odit praesentium tempore! Aperiam debitis fugit, id magnam molestias perferendis provident quisquam recusandae repellendus sed.</span><span>Debitis iste placeat possimus? Adipisci architecto cum facilis impedit magnam nemo qui reiciendis voluptate voluptatibus! Aut culpa fugit officiis quo?</span><span>A ad amet consectetur earum eius maiores modi, nisi praesentium, qui quisquam, quo rem saepe voluptatum.</span></p>
+        <hr>
     </div>
     <div class="images">
         <div class="uno">
+            <div>Img FLEX!</div>
             <div></div>
             <div></div>
-            <div></div>
-            <div></div>
+            <div>Img FLEX!</div>
         </div>
         <div class="uno">
+            <div>Img FLEX!</div>
             <div></div>
             <div></div>
-            <div></div>
-            <div></div>
+            <div>Img FLEX!</div>
         </div>
     </div>
 </main>
 <footer>
-    <nav>
+    <div class="nav-bottom">
         <div>Inicio</div>
         <div>Blog</div>
         <div>Proyectos</div>
         <div>Contacto</div>
-    </nav>
+    </div>
     <div class="social">
+        <div>FB</div>
+        <div>TW</div>
     </div>
 </footer>
 </body>
