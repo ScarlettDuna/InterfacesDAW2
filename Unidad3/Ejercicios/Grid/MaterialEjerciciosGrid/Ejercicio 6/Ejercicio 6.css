@@ -13,12 +13,28 @@
 	grid-template-columns: repeat(2, 9rem 6rem);
 	grid-template-rows: repeat(3, minmax(6rem, auto));
 	grid-auto-flow: row;
-	background-color: #fff;
-	color: #444;
 	margin: 2.5rem;
 }
 
-.box .box {
-	background-color: #ccc;
-	color: #444;
+.a {
+	grid-column: 1 / span 2;
+}
+.b {
+	grid-column: 4;
+}
+.c {
+	grid-column: 1 / 2;
+	grid-row: 2 / 4;
+}
+.d {
+	grid-column: 3 / 4;
+	grid-row: 3;
+}
+.e {
+	grid-column: 2 / 5;
+	grid-row: 2;
+}
+.f {
+	grid-column: 4 / 5;
+	grid-row: 3;
 }
