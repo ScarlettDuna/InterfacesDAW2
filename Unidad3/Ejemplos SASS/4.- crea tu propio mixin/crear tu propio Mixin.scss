@@ -33,3 +33,57 @@ article{
 section{
     @include neo( 20px , 10px );
 }
+
+// Mixin para centrar todo con Flex
+@mixin flex-center {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin flexible con argumentos (dirección y alineación) 
+@mixin flex-layout($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex; 
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Mixin para Grid básico con columnas adaptables 
+@mixin grid-layout($cols: 1fr, $rows: auto, $gap: 0) {
+  display: grid; 
+  grid-template-columns: $cols;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+// Mixin para galerías tipo "auto-fill" (muy útil para imágenes) 
+@mixin grid-gallery($min-width: 200px, $gap: 1rem) {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+  gap: $gap;
+}
+
+// Ejemplo de query
+// Definimos variables para los tamaños [cite: 25]
+$movil: 600px;
+$tablet: 900px;
+
+// Mixin con la regla @content [cite: 54]
+@mixin responsive($dispositivo) {
+  @if $dispositivo == movil {
+    @media (max-width: $movil) { @content; }
+  } @else if $dispositivo == tablet {
+    @media (max-width: $tablet) { @content; }
+  }
+}
+
+// Uso en tu código
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  @include responsive(movil) {
+    grid-template-columns: 1fr; // En móviles pasa a una sola columna
+  }
+}
