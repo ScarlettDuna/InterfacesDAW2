@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 1px solid red;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+        }
+        a:nth-child(1) {
+            margin-right: auto; /* Empuja a todos sus hermanos hacia el lado opuesto */ 
+        }
+        /* En un contenedor Flex, un margen auto absorbe todo el espacio disponible en esa dirección. 
+        Al ponérselo a la derecha al primer elemento, creas un "espaciador invisible" que empuja a los demás elementos hacia el final del contenedor.
+        */
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacto</a>
+    </nav>
+</body>
+</html>

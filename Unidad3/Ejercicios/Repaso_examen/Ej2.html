@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    * {
+        border: 1px solid purple;
+    }
+        body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            margin: 0;
+            padding: 0;
+            height: 50vh;
+        }
+        header {
+            grid-column: 1 / 4;
+        }
+        main {
+            grid-column: 1 /span 2;
+            grid-row: 2 / span 2;
+        }
+        aside {
+            grid-column: 3;
+            grid-row: 2 / span 2;
+        }
+        main, header, aside {
+            align-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <aside>Aside</aside>
+    <main>Main</main>
+</body>
+</html>

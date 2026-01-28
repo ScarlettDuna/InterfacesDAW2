@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor-cards {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card {
+            flex-basis: 25%;
+            padding: 15px;
+            border: 2px solid purple;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card button {
+            margin-top: auto;
+            padding: 10px 5px;
+            border-radius: 25px;
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-cards">
+    <div class="card">
+        <h3>Básico</h3>
+        <p>Texto corto.</p>
+        <button>Comprar</button>
+    </div>
+    <div class="card">
+        <h3>Pro</h3>
+        <p>Texto mucho más largo que empuja todo hacia abajo porque tiene muchas ventajas...</p>
+        <button>Comprar</button>
+    </div>
+    <div class="card">
+        <h3>Premium</h3>
+        <p>Texto medio.</p>
+        <button>Comprar</button>
+    </div>
+</div>
+</body>
+</html>

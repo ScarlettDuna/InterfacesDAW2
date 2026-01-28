@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            border: 1px solid plum;
+        }
+        .layout {
+            height: 100vh;
+            display: grid;
+            grid-template: 200px 1fr 200px / 100px 1fr 80px;
+            grid-template-areas: 
+                                "head head head"
+                                "nav main aside"
+                                "foot foot foot";
+        }
+        header {grid-area: head;}
+        nav {grid-area: nav;}
+        main {grid-area: main;}
+        aside {grid-area: aside;}
+        footer {grid-area: foot;}
+        .layout > *{
+            display: grid;
+            place-items: center; /* Shorthand para align e justify items */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+  <header>Cabecera</header>
+  <nav>Menú</nav>
+  <main>Contenido Principal</main>
+  <aside>Barra Lateral</aside>
+  <footer>Pie de página</footer>
+</div>
+</body>
+</html>
