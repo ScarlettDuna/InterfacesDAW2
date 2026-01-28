@@ -1,0 +1,56 @@
+$color-principal : #f4f4f4;
+$texto: #333333;
+
+.servicios-especiales {
+    background-color: $color-principal;
+    padding: 10px;
+    font-family: 'Verdana', sans-serif;
+    h2 {
+        color: $texto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+.servicios-contenedor {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+@mixin molde-tarjeta($color-back, $border, $color-sec) {
+    background-color: $color-back;
+    border: 1px solid $border;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s;
+    &:hover {
+        transform: translateY(-10px);
+        border-color: $color-sec;
+    }
+    h3 {
+        color: $color-sec;
+        font-size: 1.5rem;
+    }
+    p {
+        color: #666666;
+        line-height: 1.6;
+    }
+    button {
+        background-color: $color-sec;
+        color: #ffffff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($color-sec, 10%);
+            /* lighten($color, $amount) */
+        }
+    }
+}
+.tarjeta {
+    @include molde-tarjeta(#ffffff, #dddddd, #ff6600);
+    
+}

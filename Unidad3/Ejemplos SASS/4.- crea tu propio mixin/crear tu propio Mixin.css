@@ -28,4 +28,14 @@ section {
   border-radius: 20px;
   background: #e0e0e0;
   box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 600px) {
+  .images {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=crear tu propio Mixin.css.map */

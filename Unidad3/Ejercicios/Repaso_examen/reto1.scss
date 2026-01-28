@@ -1,0 +1,36 @@
+$color_fondo : #3498db;
+$color_texto : white;
+
+.btn-personalizado {
+    :hover {
+        background-color: $color_fondo;
+    }
+    span {
+        font-weight: bold;
+    }
+}
+
+/* Reto 2 */
+@mixin centrar-todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-central {
+    @include centrar-todo()
+}
+
+/* Reto 3 */
+@mixin estilo-tarjeta($color){
+    border: 2px solid $color;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.tarjeta-info {
+    @include estilo-tarjeta(blue)
+}
+.tarjeta-alerta {
+    @include estilo-tarjeta(red)
+}

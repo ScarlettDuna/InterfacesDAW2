@@ -1,0 +1,26 @@
+.btn-personalizado :hover {
+  background-color: #3498db;
+}
+.btn-personalizado span {
+  font-weight: bold;
+}
+
+/* Reto 2 */
+.caja-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reto 3 */
+.tarjeta-info {
+  border: 2px solid blue;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.tarjeta-alerta {
+  border: 2px solid red;
+  padding: 15px;
+  border-radius: 10px;
+}/*# sourceMappingURL=reto1.css.map */

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Ejemplo sin Anidación */
+/* Ejemplo SIN anidación */
 header {
   color: black;
 }
@@ -23,10 +24,6 @@ header nav {
   display: flex;
 }
 
-/*
-    ¿Qué significa & en SCSS?
-     Añade el selector "padre" cuando anidamos
-*/
 /* Ejemplo sin Selector & ni Anidación */
 a {
   color: black;
@@ -58,19 +55,6 @@ a:visited {
   color: pink;
 }
 
-/* 
-    ¿Qué nombre pongo en una clase CSS?
-        En principio puedes poner cualquier nombre pero mejor si seguimos unas reglas o una metodología
-
-    ¿Qué metodologia CSS usar?
-        Existen muchas: BEM CSS, SUIT CSS, CUBE CSS
-
-    ¿Qué significa BEM CSS?
-        Es una metodología que define un bloque, elemento y modificador
-
-    ¿Qué es BEM en Sass?
-        Pues adaptamos los selectores de BEM gracias a la anidación y el selector &
-*/
 /* Ejemplo de BEM sin Anidar */
 .header {
   color: black;
@@ -104,8 +88,4 @@ a:visited {
 }
 .header__nav {
   color: red;
-}
-
-/*
-        Descarga BEM Helper para VSCode
-*//*# sourceMappingURL=crear tu propio Mixin.css.map */
+}/*# sourceMappingURL=anidacion y selector.css.map */

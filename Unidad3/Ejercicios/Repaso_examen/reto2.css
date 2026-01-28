@@ -1,0 +1,49 @@
+.servicios-especiales {
+  background-color: #f4f4f4;
+  padding: 10px;
+  font-family: "Verdana", sans-serif;
+}
+.servicios-especiales h2 {
+  color: #333333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.servicios-contenedor {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  transition: transform 0.3s;
+}
+.tarjeta:hover {
+  transform: translateY(-10px);
+  border-color: #ff6600;
+}
+.tarjeta h3 {
+  color: #ff6600;
+  font-size: 1.5rem;
+}
+.tarjeta p {
+  color: #666666;
+  line-height: 1.6;
+}
+.tarjeta button {
+  background-color: #ff6600;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tarjeta button:hover {
+  background-color: rgb(204, 81.6, 0);
+  /* lighten($color, $amount) */
+}/*# sourceMappingURL=reto2.css.map */

@@ -1,0 +1,39 @@
+$borde : purple;
+$main : lightblue;
+
+@mixin molde-tarjeta(){
+    border: 2px solid $borde;
+    border-radius: 10px;
+    background-color: $main;
+    padding: 15px;
+}
+
+/* Mobile first */
+.testimonios {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .card {
+        @include molde-tarjeta();
+        overflow: auto;
+    }
+    img {
+        object-fit: cover;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .testimonios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr;
+        grid-auto-rows: 150px;
+        gap: 20px;
+    }
+    .card:first-of-type {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+}

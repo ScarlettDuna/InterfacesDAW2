@@ -1,0 +1,32 @@
+/* Mobile first */
+.testimonios {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.testimonios .card {
+  border: 2px solid purple;
+  border-radius: 10px;
+  background-color: lightblue;
+  padding: 15px;
+  overflow: auto;
+}
+.testimonios img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr;
+    grid-auto-rows: 150px;
+    gap: 20px;
+  }
+  .card:first-of-type {
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+  }
+}/*# sourceMappingURL=Ej7.css.map */
