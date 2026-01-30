@@ -1,0 +1,345 @@
+// VARIABLES DE COLORES
+$color-verde: #4caf50;
+$color-verde-dark: #43A047;
+$color-gris-fondo: #e6e6e6;
+$color-gris-claro: #f5f5f5;
+$color-gris-nav: #d3d3d3;
+$color-gris-footer: #BDBDBD;
+$color-gris-card: #ddd;
+$color-sombra: #333333;
+$white: #fff;
+$black: #000;
+
+// MIXINS
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-shadow {
+    box-shadow: 1px 1px 4px $color-sombra;
+}
+
+@mixin efecto-hundido {
+    &:hover {
+        box-shadow: inset 1px 1px 4px $color-verde-dark;
+    }
+}
+
+// ESTILOS BASE
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background: $color-gris-fondo;
+    color: $black;
+}
+
+/* HEADER */
+header {
+    background: $color-verde;
+    display: block;
+    justify-content: space-between;
+    padding: 12px 24px;
+    position: relative;
+
+    a {
+        padding: 4px;
+        &:hover { filter: brightness(1.5); }
+    }
+
+    .header-left img {
+        border-radius: 4px;
+        @include card-shadow;
+    }
+
+    .header-right {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+
+    .header-actions {
+        ul { list-style: none; }
+        li {
+            display: inline-block;
+            padding: 10px;
+        }
+        img { width: 24px; }
+        a:hover img {
+            filter: drop-shadow(0 0 5px $color-verde);
+        }
+    }
+}
+
+// Filtro para el icono de idioma
+img[src*="language_spanish"] {
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+    &:hover { filter: brightness(0) invert(1); }
+}
+
+/* NAV */
+nav {
+    background: $color-gris-nav;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: right;
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: $black;
+        font-weight: 600;
+        padding: 5px 10px;
+        margin: 2px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 4px $color-verde;
+
+        &:hover { background-color: $color-verde-dark; }
+    }
+}
+
+/* BUSCADOR */
+#buscador {
+    background-image: url("./images/istockphoto-runner.jpg");
+    background-size: cover;
+    height: 400px;
+    padding: 40px 20px;
+
+    form {
+        max-width: 600px;
+        margin: auto;
+        text-align: center;
+    }
+
+    input, button {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 6px;
+        @include card-shadow;
+    }
+
+    input {
+        padding: 12px;
+        border-radius: 20px;
+        border: none;
+        &:focus {
+            outline: solid $color-verde;
+            background-color: #E8F5E9;
+        }
+    }
+
+    button {
+        padding: 10px 16px;
+        border-radius: 20px;
+        border: none;
+        background: $color-verde;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover { background-color: $color-gris-footer; }
+    }
+}
+
+/* SECCIONES DE TARJETAS */
+#proximas, #cercaDeTi {
+    padding: 32px 24px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+
+    h2 {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 22%;
+        margin: 5px;
+        padding: 7px;
+        background: $color-gris-card;
+        border-radius: 12px;
+        overflow: hidden;
+        height: 220px;
+        @include card-shadow;
+        transition: box-shadow 0.3s;
+    }
+
+    img {
+        width: 90%;
+        height: 70%;
+        margin: 5px;
+        box-shadow: 1px 1px 5px $color-verde;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+#proximas {
+    background: $color-verde;
+    div:hover { box-shadow: 2px 2px 8px 1px $color-gris-claro; }
+}
+
+#cercaDeTi {
+    background: $color-gris-claro;
+    div:hover { box-shadow: 2px 2px 8px 1px $color-verde-dark; }
+}
+
+/* GRID SECTIONS (CALENDARIO, CATEGORIA, TEMATICAS) */
+#calendario, #categoria, #tematicas {
+    padding: 32px 24px;
+    text-align: center;
+    display: grid;
+    gap: 12px;
+
+    div, button { @include efecto-hundido; }
+}
+
+#calendario {
+    background: $color-gris-nav;
+    grid-template-columns: repeat(4, 1fr);
+    
+    h2 { grid-column: 1 / 5; margin-bottom: 16px; }
+    
+    button {
+        width: 85%;
+        justify-self: center;
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 2px solid $color-verde;
+        background: $white;
+        font-weight: 600;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+#categoria {
+    background: $color-verde;
+    grid-template-columns: repeat(4, 1fr);
+    h2 { grid-column: 1 / 5; }
+    div {
+        margin: 6px 12px;
+        background: $white;
+        padding: 12px 20px;
+        border-radius: 12px;
+        font-weight: 600;
+    }
+}
+
+#tematicas {
+    background: $color-gris-card;
+    grid-template-columns: repeat(3, 1fr);
+    h2 { grid-column: 1 / 4; margin-bottom: 16px; }
+    div {
+        margin: 8px;
+        background: #66bb6a;
+        padding: 14px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+}
+
+/* FOOTER */
+footer {
+    background: $color-gris-footer;
+    padding: 40px 24px;
+    display: flex;
+
+    > div {
+        width: 20%;
+        margin-right: 2%;
+    }
+
+    .right-side {
+        width: 28%;
+        margin-left: 25px;
+        img { width: 90px; }
+    }
+
+    .address p {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    h4 { margin-bottom: 8px; font-size: 16px; }
+
+    a {
+        display: block;
+        margin-bottom: 6px;
+        text-decoration: none;
+        color: $black;
+        font-size: 14px;
+        &:hover { text-decoration: underline; }
+    }
+}
+
+/* MEDIA QUERY */
+@media (max-width: 650px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        .header-right {
+            position: static;
+            width: auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    nav { text-align: center; }
+
+    #buscador {
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 15px;
+
+        form {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            gap: 5px;
+            width: 100%;
+        }
+        input { flex-grow: 1; flex-shrink: 2; }
+        button { flex-shrink: 1; margin: 6px 3px; }
+    }
+
+    #proximas, #cercaDeTi {
+        flex-direction: column;
+        align-items: center;
+        div { width: 90%; height: auto; min-height: 200px; }
+    }
+
+    #categoria, #tematicas, #calendario {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        
+        div, button {
+            width: 100%;
+            @include flex-center;
+        }
+        h2 { grid-column: 1 / span 2; }
+    }
+
+    footer {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        > div, .right-side { width: 45%; margin: 10px 0; }
+    }
+}

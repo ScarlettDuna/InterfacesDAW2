@@ -12,8 +12,7 @@
   overflow: auto;
 }
 .testimonios img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* Desktop */
