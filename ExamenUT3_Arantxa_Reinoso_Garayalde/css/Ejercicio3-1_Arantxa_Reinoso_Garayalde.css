@@ -1,0 +1,50 @@
+body {
+  padding: 0;
+  box-sizing: border-box;
+}
+body * {
+  border: 2px solid green;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  height: 35px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 460px;
+}
+
+.izq-arr {
+  min-height: 33%;
+  width: 20%;
+}
+
+.izq-abj {
+  min-height: 60%;
+  width: 20%;
+}
+
+.bigcont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 95%;
+  width: 78%;
+  justify-content: flex-end;
+  align-content: center;
+}
+.bigcont > div {
+  width: 22%;
+  height: 55px;
+  border: 2px dotted red;
+}
+
+footer {
+  height: 35px;
+}/*# sourceMappingURL=Ejercicio3-1_Arantxa_Reinoso_Garayalde.css.map */

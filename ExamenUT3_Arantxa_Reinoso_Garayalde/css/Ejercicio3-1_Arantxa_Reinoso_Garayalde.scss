@@ -1,0 +1,56 @@
+@mixin flex_Standard($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}
+@mixin set_size($height, $width){
+    min-height: $height;
+    width: $width;
+}
+
+body {
+    padding: 0;
+    box-sizing: border-box;
+    * {
+        border: 2px solid green;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+}
+
+
+header {
+    display: flex;
+    height: 35px;
+}
+
+main {
+    @include flex_Standard(column);
+    height: 460px;
+
+}
+
+.izq-arr {
+    @include set_size(33%, 20%);
+}
+
+.izq-abj {
+    @include set_size(60%, 20%);
+}
+
+.bigcont {
+    @include flex_Standard();
+    height: 95%;
+    width: 78%;
+    justify-content: flex-end;
+    align-content: center;
+    > div {
+        width: 22%;
+        height: 55px;
+        border: 2px dotted red;
+    }
+}
+
+footer {
+    height: 35px;
+}
