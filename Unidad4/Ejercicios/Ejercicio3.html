@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Audio</title>
+  <style>
+    /* Página en blanco real */
+    html, body { margin: 0; height: 100%; background: #fff; }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop hidden>
+    <source src="cancion.mp3" type="audio/mpeg">
+    <source src="cancion.ogg" type="audio/ogg">
+
+    <!-- Fallback legacy (Flash / embed). Hoy casi ningún navegador lo ejecuta -->
+    <object type="application/x-shockwave-flash" data="player.swf" width="0" height="0">
+      <param name="movie" value="player.swf">
+      <param name="FlashVars" value="audio=cancion.mp3&autoplay=1&loop=1">
+      <embed src="player.swf" width="0" height="0" FlashVars="audio=cancion.mp3&autoplay=1&loop=1"></embed>
+    </object>
+
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+</body>
+</html>

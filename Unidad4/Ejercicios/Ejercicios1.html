@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Ejercicio Multimedia</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @media (min-width: 1600px) {
+        .paisaje img {
+            width: 70vw;
+            margin: auto;
+        }
+}
+
+  </style>
 </head>
 <body>
-    
+
+<picture class="paisaje">
+
+  <!-- >= 1200px, WEBP -->
+  <source
+    type="image/webp"
+    media="(min-width: 1200px)"
+    srcset="./img/paisaje1.webp">
+
+  <!-- >= 1200px, JPG -->
+  <source
+    type="image/jpeg"
+    media="(min-width: 1200px)"
+    srcset="./img/paisaje1.jpg">
+
+  <!-- >= 800px, WEBP -->
+  <source
+    type="image/webp"
+    media="(min-width: 800px)"
+    srcset="./img/paisaje3.webp">
+
+  <!-- >= 800px, JPG -->
+  <source
+    type="image/jpeg"
+    media="(min-width: 800px)"
+    srcset="./img/paisaje3.jpg">
+
+  <!-- RESTO (fallback total) -->
+  <img src="./img/paisaje2.jpg" alt="Paisaje">
+
+</picture>
+
 </body>
 </html>
