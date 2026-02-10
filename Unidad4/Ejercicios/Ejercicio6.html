@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+        }
+        img {
+            width: 300px;
+            position: absolute;
+            animation: opacity 8s infinite;
+        }
+        img:first-of-type {
+            animation-delay: 0s;
+        }
+        img:nth-of-type(2){
+            animation-delay: 2s;
+        }
+        img:nth-of-type(3){
+            animation-delay: 4s;
+        }
+        img:last-of-type{
+            animation-delay: 6s;
+        }
+        @keyframes opacity {
+            75% {opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+    <!--Diseña una página web con una galería de cuatro fotos que van cambiando
+    cada 2 segundos continuamente mientras la página se encuentra abierta en
+    el navegador.
+    -->
+    <div class="cont-galeria">
+        <img src="./img/paisaje1.jpg" alt="">
+        <img src="./img/paisaje2.jpg" alt="">
+        <img src="./img/paisaje3.jpg" alt="">
+        <img src="./img/sunset.jpg" alt="">
+    </div>
+</body>
+</html>

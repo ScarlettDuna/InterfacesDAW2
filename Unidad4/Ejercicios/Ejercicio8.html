@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVD Animation</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        div {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(28, 28, 29);
+            position: relative;
+            overflow: hidden;
+        }
+        .dvd {
+            background-image: url('./img/logodvd2.png');
+            width: 310px;
+            height: 250px;
+            position: absolute;
+            animation: dvdMove 8s infinite linear;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border-radius: 200px;
+        }
+
+        @keyframes dvdMove {
+            /* esquina superior izquierda */
+            0% {
+                transform: translate(0vw, 0);
+                background-color: rebeccapurple;
+            }
+            /* esquina superior derecha */
+            25% {
+                transform: translate(75vw, 0);
+                background-color: yellow;
+            }
+            /* esquina inferior derecha */
+            50% {
+                transform: translate(75vw, 75vh);
+                background-color: blue;
+            }
+            /* esquina inferior izquierda */
+            75% {
+                transform: translate(25vw, 75vh);
+                background-color: green;
+            }
+            /* vuelve al inicio */
+            100% {
+                transform: translate(0, 0);
+                background-color: rebeccapurple;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--Realiza una página
+    web con una animación similar, de modo que el icono del formato DVD se
+    mueva hacia arriba, abajo, derecha e izquierda de la página (en este caso
+    siempre hacia la misma posición). -->
+    <div class="container">
+        <div class="dvd"></div>
+    </div>
+</body>
+</html>
