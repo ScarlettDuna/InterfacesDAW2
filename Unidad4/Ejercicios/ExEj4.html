@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            font-family: sans-serif;
+        }
+
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background-color: #1e1e2f;
+            color: white;
+            padding: 20px;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+        .sidebar li:hover {
+            transition: translateX();
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .sidebar a:hover {
+            color: #8f8fff;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">Mi App</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Configuración</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <h1>Contenido principal</h1>
+        <p>Aquí va lo importante.</p>
+    </main>
+</body>
+
+</html>

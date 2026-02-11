@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 9</title>
+
+<style>
+    body {
+        overflow: hidden;
+    }
+    h1 {
+        margin-top: 40vh;
+        transform: translateX(80vw);
+        animation: mytitle 4s linear 2s forwards;
+    }
+
+    @keyframes mytitle {
+        0% {
+            transform: translateX(80vw) rotate(0deg);
+        }
+        25% {
+            transform: translateX(60vw) rotate(90deg);
+        }
+        50% {
+            transform: translateX(40vw) rotate(180deg);
+        }
+        75% {
+            transform: translateX(20vw) rotate(270deg);
+        }
+        100% {
+            transform: translateX(0) rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>Ejercicio 9</h1>
+</body>
+</html>

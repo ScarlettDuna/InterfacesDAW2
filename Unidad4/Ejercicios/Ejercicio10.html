@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 3em 10%;
+            background: #333;
+        }
+
+        body:hover .ball{
+            animation-name: ballmove;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
+        .ball {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        @keyframes ballmove {
+            0% {
+                transform: translateX(0) rotate(0);
+            }
+
+            100% {
+                transform: translateX(450px) rotate(2turn);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img class="ball" src="../Ejemplos explicados multimedia/images/pelota.png" alt="ball" width="111" height="111" />
+
+</body>
+</html>

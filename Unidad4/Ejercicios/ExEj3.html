@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            animation: arg 4s linear 2s backwards infinite;
+            margin: 25px;
+        }
+        @keyframes arg {
+        
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .pelota {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-radius: 50px;
+            animation: botar 4s linear infinite;
+            margin: 100px 250px;
+        }
+        @keyframes botar {
+        0% {
+            transform: translateY(0);
+            animation-timing-function: ease-out; /* bajada */
+        }
+
+        50% {
+            transform: translateY(-200px);
+            animation-timing-function: ease-in; /* subida */
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado"></div>
+
+
+    <div class="pelota"></div>
+</body>
+</html>
