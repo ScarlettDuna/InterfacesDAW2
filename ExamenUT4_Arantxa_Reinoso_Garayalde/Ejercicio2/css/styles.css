@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    overflow: hidden;
+}
+
+.contenedor {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(28, 28, 29);
+    position: relative;
+}
+.pelota {
+    background-image: url('../img/pelota.jpg');
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    animation: move 4s infinite alternate;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 200px;
+}
+@keyframes move {
+    /* width - height  */
+    0% {
+        transform: translate(calc(0vw), calc(0vh));
+        animation-timing-function: ease-out;}
+    20% {
+        transform: translate(calc(20vw - 125px), calc(100vh - 250px));
+        animation-timing-function: ease-out;}
+    40% {
+        transform: translate(calc(40vw - 250px), calc(0vh));
+        animation-timing-function: ease-out;}
+    60% {
+        transform: translate(calc(60vw - 250px), calc(100vh - 250px));
+        animation-timing-function: ease-out;}
+    80% {
+        transform: translate(calc(80vw - 250px), calc(0vh));
+        animation-timing-function: ease-out;}
+    100% {
+        transform: translate(calc(100vw - 250px), calc(100vh - 250px));
+        animation-timing-function: ease-out;}
+}

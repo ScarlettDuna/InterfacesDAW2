@@ -1,0 +1,36 @@
+.contenedor {
+    display: flex;
+}
+.contenedor > div {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+.circulo {
+    border-radius: 150px;
+    transition: width 2s, height 4s;
+    background-color: green;
+}
+.circulo:hover {
+    width: 200px;
+    height: 200px;
+}
+.triangulo {
+    transition: transform 0s steps(1), background-color 1s linear;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    background-color: yellow;
+}
+.triangulo:hover {
+    transform: rotate(180deg);
+    background-color: blueviolet;
+}
+.cuadrado {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    background-color: blue;
+}
+.cuadrado:hover {
+    opacity: 0.2;
+}
