@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 6</title>
     <style>
-        div {
+        .cont-galeria {
             position: relative;
+            padding: 7px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 300px;
+            height: 200px;
         }
         img {
             width: 300px;
             position: absolute;
             animation: opacity 8s infinite;
+            border-radius: 10px;
         }
         img:first-of-type {
             animation-delay: 0s;
@@ -31,6 +37,7 @@
     </style>
 </head>
 <body>
+    <h1>Galería de imágenes</h1>
     <!--Diseña una página web con una galería de cuatro fotos que van cambiando
     cada 2 segundos continuamente mientras la página se encuentra abierta en
     el navegador.

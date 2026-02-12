@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DVD Animation</title>
+    <title>Ejercicio 8: DVD Animation</title>
     <style>
+        html, body {
+            overflow: hidden;
+        }
         body {
             margin: 0;
         }
         div {
+            background-color: rgb(28, 28, 29);
+            top: 0;
+            left: 0;
+        }
+        .container {
             width: 100vw;
             height: 100vh;
             background-color: rgb(28, 28, 29);
             position: relative;
-            overflow: hidden;
         }
         .dvd {
             background-image: url('./img/logodvd2.png');
             width: 310px;
             height: 250px;
             position: absolute;
-            animation: dvdMove 8s infinite linear;
+            animation:
+                dvdMove 6s infinite linear,
+                dvdColor 6s infinite steps(1, end);
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -28,39 +37,23 @@
         }
 
         @keyframes dvdMove {
-            /* esquina superior izquierda */
-            0% {
-                transform: translate(0vw, 0);
-                background-color: rebeccapurple;
-            }
-            /* esquina superior derecha */
-            25% {
-                transform: translate(75vw, 0);
-                background-color: yellow;
-            }
-            /* esquina inferior derecha */
-            50% {
-                transform: translate(75vw, 75vh);
-                background-color: blue;
-            }
-            /* esquina inferior izquierda */
-            75% {
-                transform: translate(25vw, 75vh);
-                background-color: green;
-            }
-            /* vuelve al inicio */
-            100% {
-                transform: translate(0, 0);
-                background-color: rebeccapurple;
-            }
+            0% {transform: translate(calc(50vw - 155px), 0);}
+            25% {transform: translate(calc(100vw - 310px), calc(50vh - 125px));}
+            50% {transform: translate(calc(50vw - 155px), calc(100vh - 250px));}
+            75% {transform: translate(0, calc(50vh - 125px));}
+            100% {transform: translate(calc(50vw - 155px), 0);}
         }
+        @keyframes dvdColor {
+            0%   { background-color: rebeccapurple; }
+            25%  { background-color: yellow; }
+            50%  { background-color: blue; }
+            75%  { background-color: green; }
+            100% { background-color: rebeccapurple; }
+        }
+
     </style>
 </head>
 <body>
-    <!--Realiza una página
-    web con una animación similar, de modo que el icono del formato DVD se
-    mueva hacia arriba, abajo, derecha e izquierda de la página (en este caso
-    siempre hacia la misma posición). -->
     <div class="container">
         <div class="dvd"></div>
     </div>
