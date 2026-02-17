@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Maratón de Valencia Trinidad Alfonso",
+    "city": "Valencia",
+    "country": "España",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Diciembre"
+  },
+  {
+    "id": 2,
+    "name": "Zurich Maratón de Sevilla",
+    "city": "Sevilla",
+    "country": "España",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Febrero"
+  },
+  {
+    "id": 3,
+    "name": "Maratón de Barcelona",
+    "city": "Barcelona",
+    "country": "España",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Marzo"
+  },
+  {
+    "id": 4,
+    "name": "Behobia-San Sebastián",
+    "city": "San Sebastián",
+    "country": "España",
+    "distance_km": 20,
+    "type": "Carrera popular",
+    "surface": "Asfalto",
+    "month": "Noviembre"
+  },
+  {
+    "id": 5,
+    "name": "San Silvestre Vallecana",
+    "city": "Madrid",
+    "country": "España",
+    "distance_km": 10,
+    "type": "Carrera popular",
+    "surface": "Asfalto",
+    "month": "Diciembre"
+  },
+  {
+    "id": 6,
+    "name": "Media Maratón de Madrid",
+    "city": "Madrid",
+    "country": "España",
+    "distance_km": 21.097,
+    "type": "Media Maratón",
+    "surface": "Asfalto",
+    "month": "Abril"
+  },
+  {
+    "id": 7,
+    "name": "Maratón de Málaga",
+    "city": "Málaga",
+    "country": "España",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Diciembre"
+  },
+  {
+    "id": 8,
+    "name": "Zegama-Aizkorri",
+    "city": "Zegama",
+    "country": "España",
+    "distance_km": 42,
+    "type": "Trail",
+    "surface": "Montaña",
+    "month": "Mayo"
+  },
+  {
+    "id": 9,
+    "name": "Transvulcania",
+    "city": "La Palma",
+    "country": "España",
+    "distance_km": 73,
+    "type": "Ultra Trail",
+    "surface": "Montaña",
+    "month": "Mayo"
+  },
+  {
+    "id": 10,
+    "name": "Maratón de Madrid (Rock 'n' Roll)",
+    "city": "Madrid",
+    "country": "España",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Abril"
+  },
+  {
+    "id": 11,
+    "name": "New York City Marathon",
+    "city": "Nueva York",
+    "country": "Estados Unidos",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Noviembre"
+  },
+  {
+    "id": 12,
+    "name": "Boston Marathon",
+    "city": "Boston",
+    "country": "Estados Unidos",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Abril"
+  },
+  {
+    "id": 13,
+    "name": "London Marathon",
+    "city": "Londres",
+    "country": "Reino Unido",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Abril"
+  },
+  {
+    "id": 14,
+    "name": "Berlin Marathon",
+    "city": "Berlín",
+    "country": "Alemania",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Septiembre"
+  },
+  {
+    "id": 15,
+    "name": "Chicago Marathon",
+    "city": "Chicago",
+    "country": "Estados Unidos",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Octubre"
+  },
+  {
+    "id": 16,
+    "name": "Tokyo Marathon",
+    "city": "Tokio",
+    "country": "Japón",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Marzo"
+  },
+  {
+    "id": 17,
+    "name": "Paris Marathon",
+    "city": "París",
+    "country": "Francia",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Abril"
+  },
+  {
+    "id": 18,
+    "name": "Comrades Marathon",
+    "city": "Durban",
+    "country": "Sudáfrica",
+    "distance_km": 89,
+    "type": "Ultra Maratón",
+    "surface": "Asfalto",
+    "month": "Junio"
+  },
+  {
+    "id": 19,
+    "name": "UTMB Mont-Blanc",
+    "city": "Chamonix",
+    "country": "Francia",
+    "distance_km": 171,
+    "type": "Ultra Trail",
+    "surface": "Montaña",
+    "month": "Agosto"
+  },
+  {
+    "id": 20,
+    "name": "Sydney Marathon",
+    "city": "Sídney",
+    "country": "Australia",
+    "distance_km": 42.195,
+    "type": "Maratón",
+    "surface": "Asfalto",
+    "month": "Septiembre"
+  }
+]
