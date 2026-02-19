@@ -325,6 +325,45 @@ footer a:hover {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
+.buscador-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.resultados {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    max-height: 200px;
+    overflow-y: auto;
+
+    margin-top: 6px;
+    z-index: 10;
+
+    display: none; /* lo activaremos con JS */
+}
+.resultados ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.resultados li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.resultados li:hover {
+    background-color: #E8F5E9;
+}
+
+
 
 @media (max-width: 650px) {
     header {
