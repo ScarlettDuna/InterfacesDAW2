@@ -97,7 +97,7 @@ nav a:hover {
     box-shadow: 1px 1px 4px #333333;
 }
 
-#buscador button {
+#buscador button, .next, .prev {
     padding: 10px 16px;
     border-radius: 20px;
     border: none;
@@ -128,15 +128,22 @@ main h2 {
 }
 
 /* Próximas / CERCA */
-#proximas,
+#proximas {
+    display: flex;
+    justify-content: center;
+}
+#proximas .viewport ,
 #cercaDeTi {
     padding: 32px 24px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
     width: 100%;
 }
-
+.viewport {
+    max-width: 90vw;
+}
 #proximas {
     background: #4caf50;
 }
@@ -153,36 +160,81 @@ main h2 {
 }
 
 /* Tarjetas */
-#proximas div,
-#cercaDeTi div {
+#proximas .card{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 22%;
-    margin: 5px;
-    padding: 7px;
+    width: 23%;
+    margin: 10px;
+    padding: 12px;
     background: #ddd;
     border-radius: 12px;
-    overflow: hidden;
-    height: 220px;
     box-shadow: 1px 1px 4px #333333;
 }
-#proximas div:hover {
+#proximas .card:hover {
     box-shadow: 2px 2px 8px 1px #F5F5F5;
+    cursor: pointer;
 }
-#cercaDeTi div:hover {
+#cercaDeTi .card:hover {
     box-shadow: 2px 2px 8px 1px #43A047;
+    cursor: pointer;
 }
 
-#proximas img,
-#cercaDeTi img {
-    width: 90%;
-    height: 70%;
+#proximas img{
+    width: 95%;
+    aspect-ratio: 12 / 9;
     margin: 5px;
     box-shadow: 1px 1px 5px #4caf50;
     object-fit: cover; 
     border-radius: 10px;
 }
+#proximas .card h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+#proximas .card p {
+    margin-top: 6px;
+    font-size: 18px;
+    text-align: center;
+}
+/* Carousel */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    max-width: 75vw;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+.carousel-track .card {
+    flex: 0 0 250px;      /* ancho fijo y no se encoge */
+    aspect-ratio: 1 / 1;  /* cuadrada */
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #ddd;
+    border-radius: 12px;
+    box-shadow: 1px 1px 4px #333333;
+}
+.carousel-track .card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 12 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
 
 /* Calendario */
 #calendario {
@@ -417,12 +469,34 @@ footer a:hover {
         justify-content: center;
         width: 100%;
     }
-    #proximas div, #cercaDeTi div {
+    #proximas .card{
         width: 90%; 
         height: auto; 
         min-height: 200px;
         margin: 15px 0;
     }
+    .carousel {
+        position: relative;
+        width: 100%;
+    }
+
+    .prev,
+    .next {
+        display: none;
+    }
+    .carousel-viewport {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+    .carousel-track {
+        gap: 16px;
+    }
+
+    .carousel-track .card {
+        scroll-snap-align: center;
+    }
+
     #categoria, #tematicas, #calendario {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
