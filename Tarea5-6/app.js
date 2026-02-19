@@ -18,8 +18,6 @@ let resultadoBusqueda = document.querySelector('.resultados ul')
 let btnSugerencia = document.getElementById('suggestions');
 
 // Modo sugerencia 
-
-
 btnSugerencia.addEventListener('click', () => {
     sugerenciasActivas = !sugerenciasActivas;
     if (sugerenciasActivas) {
@@ -35,7 +33,6 @@ btnSugerencia.addEventListener('click', () => {
 
 
 // Búsqueda interactiva
-
 buscador.addEventListener('input', () => {
     if (!sugerenciasActivas) return;
     clearTimeout(timeoutId);
@@ -65,7 +62,6 @@ buscador.addEventListener('input', () => {
 });
 
 // Sección de coundowns para proximas carreras
-
 let countdownTokio = new Date("2026-03-01T09:10:00+09:00").getTime();
 let countdownBoston = new Date("2026-04-20T09:00:00-04:00").getTime();
 let countdownLondres = new Date("2026-04-26T09:30:00+01:00").getTime();
@@ -136,3 +132,20 @@ prevBtn.addEventListener('click', () => {
 function updateCarousel() {
     track.style.transform = `translateX(-${index * cardWidth}px)`;
 }
+
+// Efecto "scroll reveal"
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+reveals.forEach(section => {
+    observer.observe(section);
+});

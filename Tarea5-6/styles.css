@@ -125,6 +125,8 @@ main h2 {
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
+    font-size: 2.2rem;
+    display: block;
 }
 
 /* Próximas / CERCA */
@@ -151,12 +153,13 @@ main h2 {
 #cercaDeTi {
     background: #f5f5f5;
 }
+
 #proximas h2,
 #cercaDeTi h2 {
     display: block;
     width: 100%;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 /* Tarjetas */
@@ -164,7 +167,7 @@ main h2 {
     display: flex;
     flex-direction: column;
     width: 23%;
-    margin: 10px;
+    margin: 1%;
     padding: 12px;
     background: #ddd;
     border-radius: 12px;
@@ -234,12 +237,24 @@ main h2 {
     border-radius: 12px;
 }
 
-
-
 /* Calendario */
+#calendario,
+#categoria,
+#tematicas {
+    width: 100%;
+}
+.viewport {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
 #calendario {
     background: #d3d3d3;
-    padding: 32px 24px;
+    display: flex;
+    justify-content: center;
+}
+#calendario .viewport {
+    padding: 24px 16px;
     text-align: center;
     gap: 12px;
     display: grid;
@@ -255,15 +270,15 @@ main h2 {
 }
 
 #calendario button {
-    width: 85%;
+    width: 90%;
     justify-self: center;
-    margin: 6px;
+    margin: 6px 12px;
     padding: 8px 16px;
     border-radius: 20px;
     border: 2px solid #4caf50;
     background: #fff;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
 }
 
@@ -272,22 +287,22 @@ main h2 {
     background: #4caf50;
     padding: 32px 24px;
     text-align: center;
+    
+}
+#categoria .viewport{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
 }
 
-#categoria h2 {
-    grid-column: 1 / 5;
-    width: 100%;
-}
-
-#categoria div {
+#categoria >.viewport button {
     margin: 6px 12px;
     background: #fff;
     padding: 12px 20px;
     border-radius: 12px;
     font-weight: 600;
+    font-size: 1.3rem;
 }
 
 /* Temáticas */
@@ -295,27 +310,26 @@ main h2 {
     background: #ddd;
     padding: 32px 24px;
     text-align: center;
+}
+#tematicas .viewport {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
-#tematicas h2 {
-    margin-bottom: 16px;
-    grid-column: 1 / 4;
-}
-
-#tematicas div {
+#tematicas >.viewport button {
     margin: 8px;
     background: #66bb6a;
-    padding: 14px;
+    padding: 10px 14px;
     border-radius: 12px;
     text-align: center;
     font-weight: 600;
     font-size: 1.5rem;
 }
-#categoria div:hover, #tematicas div:hover, #calendario button:hover {
-    box-shadow: inset 1px 1px 4px #43A047;
+.viewport > button:hover {
+    box-shadow: 2px 2px 5px #333333;
+    transform: scale(1.1);
+    transition: transform 0.5s cubic-bezier(.22,.61,.36,1);
 }
 /* Footer */
 footer {
@@ -332,11 +346,15 @@ footer > div {
 
 footer .right-side {
     width: 28%;
-    margin-left: 25px;
+    margin-left: 100px;
 }
 
 footer .right-side img {
     width: 90px;
+}
+footer .right-side img:hover {
+    transform: scale(1.5);
+    transition: transform 0.2s cubic-bezier(.22,.61,.36,1);
 }
 
 footer .address p {
@@ -346,15 +364,16 @@ footer .address p {
 
 footer h4 {
     margin-bottom: 8px;
-    font-size: 16px;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px #2E7D32;
 }
 
 footer a {
     display: block;
-    margin-bottom: 6px;
+    margin: 12px 0;
     text-decoration: none;
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 footer a:hover {
@@ -413,6 +432,42 @@ footer a:hover {
 
 .resultados li:hover {
     background-color: #E8F5E9;
+}
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Amimación títulos   */
+main h2 {
+    animation: streetLightShadow 4s ease-in-out 5;
+}
+@keyframes streetLightShadow {
+    0% {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    }
+    20% {
+        text-shadow: -3px 3px 6px rgba(0,0,0,0.5);
+    }
+    40% {
+        text-shadow: 4px -2px 6px rgba(0,0,0,0.45);
+    }
+    60% {
+        text-shadow: -2px -4px 8px rgba(0,0,0,0.5);
+    }
+    80% {
+        text-shadow: 3px 1px 5px rgba(0,0,0,0.4);
+    }
+    100% {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    }
 }
 
 
