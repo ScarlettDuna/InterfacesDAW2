@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Buscador de Carreras de Arantxa Reinoso</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
@@ -47,6 +47,9 @@
         <a href="">Blog</a>
     </nav>
     <section id="buscador">
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src="./images/finish-line.mp4" type="video/mp4">
+        </video>
         <form method="post">
             <div class="buscador-wrapper">
                 <input type="text" id="inputBuscador">
@@ -54,6 +57,41 @@
                     <ul></ul>
                 </div>
             </div>
+            <div id="filtroPanel" class="filtro-panel">
+                <select name="pais" id="pais">
+                    <option value="">Seleccione país</option>
+                    <option value="Espana">España</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Francia">Francia</option>
+                    <option value="USA">Estados Unidos</option>
+                    <option value="Alemania">Alemania</option>
+                </select>
+
+                <select name="distancia" id="distancia">
+                    <option value="">Seleccione distancia</option>
+                    <option value="5k">5 Km</option>
+                    <option value="10k">10 Km</option>
+                    <option value="media">Media maratón</option>
+                    <option value="maraton">Maratón</option>
+                    <option value="ultra">Ultra</option>
+                    <option value="any">Cualquier distancia</option>
+                </select>
+
+                <select name="tipo" id="tipo">
+                    <option value="">Seleccione tipo</option>
+                    <option value="running">Running</option>
+                    <option value="duatlon">Duatlón</option>
+                    <option value="triatlon">Triatlón</option>
+                    <option value="relevos">Relevos</option>
+                </select>
+
+                <input type="date" name="fecha_inicio">
+                <input type="date" name="fecha_fin">
+
+                <button type="button">Buscar</button>
+                <button type="reset">Limpiar</button>
+            </div>
+
             <button type="button" id="filtro">Filtros</button>
             <button class="inactivo" id="suggestions" type="button">Sugerencias</button>
         </form>
@@ -61,27 +99,27 @@
     <main>
         <div id="proximas">
             <div class="viewport">
-            <h2>Próximas carreras</h2>   
-            <div class="card">
-                <img src="images/maratonTokio.png" alt="logo del maratón de Tokio">
-                <h3>Maratón de Tokio</h3>
-                <p class="countdown1"></p>
-            </div>
-            <div class="card">
-                <img src="images/Maraton-de-Boston.jpg" alt="">
-                <h3>Maratón de Boston</h3>
-                <p class="countdown2"></p>
-            </div>
-            <div class="card">
-                <img src="images/maratonMadrid.png" alt="">
-                <h3>Maratón de Madrid</h3>
-                <p class="countdown3"></p>
-            </div>
-            <div class="card">
-                <img src="images/LondonMarathon.jfif" alt="">
-                <h3>Maratón de Londres</h3>
-                <p class="countdown4"></p>
-            </div>
+                <h2>Próximas carreras</h2>
+                <div class="card">
+                    <img src="images/maratonTokio.png" alt="logo del maratón de Tokio">
+                    <h3>Maratón de Tokio</h3>
+                    <p class="countdown1"></p>
+                </div>
+                <div class="card">
+                    <img src="images/Maraton-de-Boston.jpg" alt="">
+                    <h3>Maratón de Boston</h3>
+                    <p class="countdown2"></p>
+                </div>
+                <div class="card">
+                    <img src="images/maratonMadrid.png" alt="">
+                    <h3>Maratón de Madrid</h3>
+                    <p class="countdown3"></p>
+                </div>
+                <div class="card">
+                    <img src="images/LondonMarathon.jfif" alt="">
+                    <h3>Maratón de Londres</h3>
+                    <p class="countdown4"></p>
+                </div>
             </div>
         </div>
         <div id="cercaDeTi" class="reveal">
@@ -89,53 +127,53 @@
             <div class="carousel">
                 <button class="prev">‹</button>
                 <div class="carousel-viewport">
-                <div class="carousel-track">
-                    <div class="card">
-                        <img src="images/feetrunning.jpg" alt="">
-                        <h3>Race name 1</h3>
-                        <p>Information about the race</p>
+                    <div class="carousel-track">
+                        <div class="card">
+                            <img src="images/feetrunning.jpg" alt="">
+                            <h3>Race name 1</h3>
+                            <p>Information about the race</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/cityrunning.jpg" alt="">
+                            <h3>Race name 2</h3>
+                            <p>Information about the race</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/marathonrunning.jpg" alt="">
+                            <h3>Race name 3</h3>
+                            <p>Information about the race</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/trailrunning.jpg" alt="">
+                            <h3>Race name 4</h3>
+                            <p>Information about the race</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/cityrunning.jpg" alt="">
+                            <h3>Race name 5</h3>
+                            <p>Information about the race</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/feetrunning.jpg" alt="">
+                            <h3>Race name 6</h3>
+                            <p>Information about the race</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/trailrunning.jpg" alt="">
+                            <h3>Race name 7</h3>
+                            <p>Information about the race</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/cityrunning.jpg" alt="">
+                            <h3>Race name 8</h3>
+                            <p>Information about the race</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/marathonrunning.jpg" alt="">
+                            <h3>Race name 9</h3>
+                            <p>Information about the race</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        <img src="images/cityrunning.jpg" alt="">
-                        <h3>Race name 2</h3>
-                        <p>Information about the race</p>
-                    </div>
-                    <div class="card">
-                        <img src="images/marathonrunning.jpg" alt="">
-                        <h3>Race name 3</h3>
-                        <p>Information about the race</p>
-                    </div>
-                    <div class="card">
-                        <img src="images/feetrunning.jpg" alt="">
-                        <h3>Race name 4</h3>
-                        <p>Information about the race</p>
-                    </div>
-                    <div class="card">
-                        <img src="images/cityrunning.jpg" alt="">
-                        <h3>Race name 5</h3>
-                        <p>Information about the race</p>
-                    </div>
-                    <div class="card">
-                        <img src="images/marathonrunning.jpg" alt="">
-                        <h3>Race name 6</h3>
-                        <p>Information about the race</p>
-                    </div>
-                    <div class="card">
-                        <img src="images/feetrunning.jpg" alt="">
-                        <h3>Race name 7</h3>
-                        <p>Information about the race</p>
-                    </div>
-                    <div class="card">
-                        <img src="images/cityrunning.jpg" alt="">
-                        <h3>Race name 8</h3>
-                        <p>Information about the race</p>
-                    </div>
-                    <div class="card">
-                        <img src="images/marathonrunning.jpg" alt="">
-                        <h3>Race name 9</h3>
-                        <p>Information about the race</p>
-                    </div>
-                </div>
                 </div>
                 <button class="next">›</button>
             </div>

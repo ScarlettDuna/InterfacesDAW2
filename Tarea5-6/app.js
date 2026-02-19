@@ -111,7 +111,9 @@ const prevBtn = document.querySelector('.prev');
 
 let index = 0;
 const cardWidth = track.children[0].offsetWidth;
-const visibleCards = 4;
+const visibleCards = Math.floor(
+    document.querySelector('.carousel-viewport').offsetWidth / cardWidth
+);
 
 nextBtn.addEventListener('click', () => {
     const totalCards = track.children.length;
@@ -148,4 +150,13 @@ const observer = new IntersectionObserver((entries) => {
 
 reveals.forEach(section => {
     observer.observe(section);
+});
+
+// Formulario "filtro"
+const btnFiltro = document.getElementById('filtro');
+const filtroPanel = document.getElementById('filtroPanel');
+
+btnFiltro.addEventListener('click', () => {
+    filtroPanel.classList.toggle('activo');
+    btnFiltro.classList.toggle('activo');
 });

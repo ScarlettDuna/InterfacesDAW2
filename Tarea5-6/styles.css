@@ -78,20 +78,32 @@ nav a:hover {
 
 /* Buscador */
 #buscador {
-    background-image: url("./images/istockphoto-runner.jpg");
+    position: relative;
     background-size: cover;
-    height: 400px;
-    padding: 40px 20px;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+}
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 #buscador form {
     max-width: 600px;
     margin: auto;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 #buscador input {
-    padding: 12px;
+    padding: 12px 24px;
     border-radius: 20px;
     border: none;
     box-shadow: 1px 1px 4px #333333;
@@ -118,7 +130,58 @@ nav a:hover {
 #buscador input:focus{
     outline: solid #4caf50;
     background-color: #E8F5E9;
+    transform: scale(1.2);
 }
+
+/* Formulario filtro oculto */
+.filtro-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+    margin-top: 10px;
+    backdrop-filter: blur(8px);
+}
+
+.filtro-panel.activo {
+    max-height: 400px; /* suficiente para el contenido */
+    opacity: 1;
+}
+.filtro-panel form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: rgba(255,255,255,0.95);
+    padding: 15px;
+    border-radius: 12px;
+}
+#filtro.activo {
+    background-color: #2E7D32;
+    color: white;
+}
+.filtro-panel select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: rgba(255,255,255,0.9);
+    border: 2px solid #4caf50;
+    border-radius: 25px;
+
+    padding: 10px 40px 10px 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.filtro-panel select:focus {
+    border-color: #2E7D32;
+    box-shadow: 0 0 6px rgba(46,125,50,0.4);
+    background-color: #fff;
+}
+
 
 /* Títulos */
 main h2 {
@@ -142,9 +205,6 @@ main h2 {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-}
-.viewport {
-    max-width: 90vw;
 }
 #proximas {
     background: #4caf50;
@@ -552,12 +612,21 @@ main h2 {
         scroll-snap-align: center;
     }
 
-    #categoria, #tematicas, #calendario {
+    #calendario,
+    #categoria,
+    #tematicas {
+        display: block;
+    }
+    .viewport {
+        width: 100%;
+    }
+    #categoria .viewport, #tematicas .viewport, #calendario .viewport {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         gap: 5px;
+        width: 100%;
     }
-    #categoria div, #tematicas div, #calendario button {
+    #categoria button, #tematicas button, #calendario button {
         width: 100%; 
         margin: 5px;
         display: flex;
